@@ -15,12 +15,19 @@ function libraryManagement(){
 
     function findBooksByGenre(genre){
         const bookOfGenre = books.filter((book) => book.genre === genre)
+        return bookOfGenre
+    }
+
+    function getBooks(){
+        return books
     }
 
     return {
         addBook,
         findBooksByAuthor,
         findBooksByGenre,
+
+        getBooks
     }
 }
 
