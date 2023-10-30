@@ -18,6 +18,15 @@ function libraryManagement(){
         return bookOfGenre
     }
 
+    function topRatedBooks(n){
+        books.sort((a, b) => {
+            if (a.averageRating() < b.averageRating()) return 1; // Compare in reverse order
+            else if (a.averageRating() > b.averageRating()) return -1;
+            else return 0;
+        });
+        return books;
+    }   
+
     function getBooks(){
         return books
     }
@@ -26,7 +35,7 @@ function libraryManagement(){
         addBook,
         findBooksByAuthor,
         findBooksByGenre,
-
+        topRatedBooks,
         getBooks
     }
 }
