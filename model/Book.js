@@ -1,8 +1,11 @@
 const isRateNumberValid = require('../utils/validateNumber')
+import { v4 as uuidv4 } from 'uuid';
+
+uuidv4();
 class Book {
     userRated = new Set();
-    constructor(isbn, title, author, genre, publishedYear){
-        this.isbn = isbn
+    constructor(title, author, genre, publishedYear){
+        this.id = uuidv4();
         this.title = title
         this.author = author
         this.genre = genre
@@ -22,3 +25,4 @@ class Book {
         }
     }
 }
+module.exports = Book
