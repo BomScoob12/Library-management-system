@@ -12,8 +12,8 @@ class Book {
 
     averageRating(){
         //map has ['key', 'value']
-        const avgRatingArray = Array.from(this.ratings)
-        const avgRating = avgRatingArray.reduce((accumulated, [key, value]) => accumulated + value, 0)/this.ratings.size
+        const ratingArr = Array.from(this.ratings)
+        const avgRating = ratingArr.reduce((accumulated, [key, value]) => accumulated + value, 0)/this.ratings.size
         return avgRating
     }
 

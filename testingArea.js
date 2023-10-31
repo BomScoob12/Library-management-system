@@ -23,7 +23,7 @@ johnBook[0].rateBook(user.userId, 4)
 johnBook[0].rateBook(user2.userId, 4.8)
 console.log(johnBook[0].averageRating() + " avg")
 console.log(johnBook[0])
-
+console.log("-------------")
 console.log("Top rated book 2")
 console.log(manager.topRatedBooks(2))
 
