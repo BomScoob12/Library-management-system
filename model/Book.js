@@ -20,6 +20,8 @@ class Book {
     rateBook(userId, rateNumber){
         if(isRateNumberValid(rateNumber)){
             this.ratings.set(userId, rateNumber)
+        }else {
+            return;
         }
     }
 }
